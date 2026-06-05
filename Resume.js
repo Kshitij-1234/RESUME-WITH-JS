@@ -1,29 +1,30 @@
-const resume={
-    
-    PersonalDetails:[{
-        Row1: { Name: "Kshitij Gawande"},
+  const Education=[ "Diploma in Computer Technology"]   
 
-    address: {
+const resume={
+   
+    PersonalDetails:[
+     { Name: "Kshitij Gawande"},
+{
        District: "Pune",
         state: "Maharashtra",
         country:"India"
     },
-    Contact: 
+   
     {
         gmail: "kshitijgawande47@gmail.com",
         phone: "8788453211",
     },
-    Education: [
+    
         {
-            Education: "Diploma in Computer Technology",
+            Education,
             College: "Venutai Chavan Polytechnic College",
         }
-    ]
-}
+    
+
 ],
          TechnicalSkills: [
         {id: 1, skillName: "C", expertiseLevel: "Novice"},
-        {id: 2, skillName: "C", expertiseLevel: "Novice"},
+        {id: 2, skillName: "C++", expertiseLevel: "Novice"},
         {id: 3, skillName: "HTML", expertiseLevel: "intermediate"},   
         {id: 4, skillName: "CSS", expertiseLevel: "intermediate"},
          ],
@@ -54,5 +55,20 @@ const resume={
     
         
 }
-console.log(resume.PersonalDetails[0].Contact);
-console.log(resume.PersonalDetails[0].Contact.phone);
+//console.log(resume.PersonalDetails[0]);
+//console.log(resume.PersonalDetails[1]);
+//console.log(resume.Projects[2]);
+
+function displayresume(){
+       console.log("====PersonalDetails====");
+    resume.PersonalDetails.forEach(function(PersonalDetails){
+     
+        console.log(PersonalDetails);
+        });
+  resume.TechnicalSkills.forEach(function(skill){
+        // console.log(skill.skillName+"  "+skill.expertiseLevel);
+        console.log("Skill details" , JSON.stringify(skill, null, 2));
+    });
+
+}
+displayresume();
